@@ -8,21 +8,29 @@
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
-<head>
-<meta charset="<?php bloginfo( 'charset' ); ?>" />
-<meta name="viewport" content="width=device-width" />
-<title><?php wp_title( '|', true, 'right' ); ?></title>
-<link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<!--[if lt IE 9]>
-<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
-<![endif]-->
+  <head>
+  <meta charset="<?php bloginfo( 'charset' ); ?>" />
+  <meta name="viewport" content="width=device-width" />
+  <title><?php wp_title( '|', true, 'right' ); ?></title>
+  <link rel="profile" href="http://gmpg.org/xfn/11" />
+  <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+  <!--[if lt IE 9]>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
+  <![endif]-->
 
-<?php wp_head(); ?>
+  <?php wp_head(); ?>
+
+  <!--[if (gt IE 8) | (IEMobile)]><!-->
+    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/application.css?v=0" />
+  <!--<![endif]-->
+
+  <!--[if (lt IE 9) & (!IEMobile)]>
+    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/oldie.css?v=0" />
+  <![endif]-->
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
+<div id="page" class="hfeed site layout-page">
 	<?php do_action( 'before' ); ?>
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
