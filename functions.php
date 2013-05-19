@@ -88,24 +88,27 @@ add_action( 'after_setup_theme', 'teapartyanimal_setup' );
  *
  * Hooks into the after_setup_theme action.
  */
-function teapartyanimal_register_custom_background() {
-	$args = array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	);
 
-	$args = apply_filters( 'teapartyanimal_custom_background_args', $args );
+// I commented this out because it's shit. I'm setting the background in CSS, WordPress.
 
-	if ( function_exists( 'wp_get_theme' ) ) {
-		add_theme_support( 'custom-background', $args );
-	} else {
-		define( 'BACKGROUND_COLOR', $args['default-color'] );
-		if ( ! empty( $args['default-image'] ) )
-			define( 'BACKGROUND_IMAGE', $args['default-image'] );
-		add_custom_background();
-	}
-}
-add_action( 'after_setup_theme', 'teapartyanimal_register_custom_background' );
+// function teapartyanimal_register_custom_background() {
+// 	$args = array(
+// 		'default-color' => 'ffffff',
+// 		'default-image' => '',
+// 	);
+
+// 	$args = apply_filters( 'teapartyanimal_custom_background_args', $args );
+
+// 	if ( function_exists( 'wp_get_theme' ) ) {
+// 		add_theme_support( 'custom-background', $args );
+// 	} else {
+// 		define( 'BACKGROUND_COLOR', $args['default-color'] );
+// 		if ( ! empty( $args['default-image'] ) )
+// 			define( 'BACKGROUND_IMAGE', $args['default-image'] );
+// 		add_custom_background();
+// 	}
+// }
+// add_action( 'after_setup_theme', 'teapartyanimal_register_custom_background' );
 
 /**
  * Register widgetized area and update sidebar with default widgets

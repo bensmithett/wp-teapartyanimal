@@ -5,7 +5,7 @@ $breakpoint-raw-output: $oldie
 $total-columns: 4
 $column-width: (60px / $base-font-size) + 0em
 $gutter-width: (20px / $base-font-size) + 0em
-$grid-padding: (10px / $base-font-size) + 0em
+$grid-padding: (20px / $base-font-size) + 0em
 $container-style: fluid
 @include border-box-sizing
 
@@ -14,7 +14,7 @@ $tablet: ((480px / $base-font-size) + 0em) 8
 $desktop: ((768px / $base-font-size) + 0em) 12
 
 // Container
-.layout-page
+.grid
   min-height: 100%
 
   @include container($total-columns, $tablet, $desktop)

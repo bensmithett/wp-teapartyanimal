@@ -30,8 +30,15 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site layout-page">
+<div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
+
+  <div class="header">
+    <div class="grid">
+      Tea party animal + some nav
+    </div>
+  </div>
+
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
