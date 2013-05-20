@@ -27,6 +27,13 @@
   <!--[if (lt IE 9) & (!IEMobile)]>
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/oldie.css?v=0" />
   <![endif]-->
+
+  <meta name="description" content="<?php if ( is_single() ) {
+        single_post_title('', true); 
+    } else {
+        bloginfo('description');
+    }
+    ?>" />
 </head>
 
 <body <?php body_class(); ?>>

@@ -58,8 +58,8 @@ function teapartyanimal_wp_title( $title, $sep ) {
 
 	// Add the blog description for the home/front page.
 	$site_description = get_bloginfo( 'description', 'display' );
-	if ( $site_description && ( is_home() || is_front_page() ) )
-		$title .= " $sep $site_description";
+	// if ( $site_description && ( is_home() || is_front_page() ) )
+	// 	$title .= " $sep $site_description";
 
 	// Add a page number if necessary:
 	if ( $paged >= 2 || $page >= 2 )
