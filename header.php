@@ -42,22 +42,20 @@
 
   <div class="header">
     <div class="grid">
-      Tea party animal + some nav
+      TPA Logo
+
+      <nav role="navigation">
+        <!--<h1 class="menu-toggle"><?php _e( 'Menu', 'teapartyanimal' ); ?></h1>-->
+        <div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'teapartyanimal' ); ?>"><?php _e( 'Skip to content', 'teapartyanimal' ); ?></a></div>
+
+        <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+      </nav>
     </div>
   </div>
 
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-		</div>
+  <div class="grid" id="content" role="main">
+    <div class="masthead" role="banner">
+      <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+      <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+    </div>
 
-		<nav id="site-navigation" class="navigation-main" role="navigation">
-			<h1 class="menu-toggle"><?php _e( 'Menu', 'teapartyanimal' ); ?></h1>
-			<div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'teapartyanimal' ); ?>"><?php _e( 'Skip to content', 'teapartyanimal' ); ?></a></div>
-
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
-
-	<div id="main" class="site-main">
