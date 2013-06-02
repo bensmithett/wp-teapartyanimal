@@ -45,9 +45,9 @@
     <div class="grid">
       TPA Logo
 
-      <nav role="navigation">
+      <nav class="navigation" role="navigation">
         <!--<h1 class="menu-toggle"><?php _e( 'Menu', 'teapartyanimal' ); ?></h1>-->
-        <div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'teapartyanimal' ); ?>"><?php _e( 'Skip to content', 'teapartyanimal' ); ?></a></div>
+        <div class="visuallyhidden"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'teapartyanimal' ); ?>"><?php _e( 'Skip to content', 'teapartyanimal' ); ?></a></div>
 
         <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
       </nav>
