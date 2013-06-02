@@ -20,6 +20,7 @@
 
   <?php wp_head(); ?>
 
+  <link href='http://fonts.googleapis.com/css?family=Sue+Ellen+Francisco' rel='stylesheet' type='text/css'>
   <!--[if (gt IE 8) | (IEMobile)]><!-->
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/application.css?v=0" />
   <!--<![endif]-->

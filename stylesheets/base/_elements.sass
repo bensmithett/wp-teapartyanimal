@@ -8,10 +8,10 @@ body
   height: 100%
 
 a
-  color: $green
+  color: $peach
 
   &:hover, &:focus
-    color: darken($green, 20%)
+    color: darken($peach, 20%)
 
 p
   @include leader(0)
@@ -35,10 +35,13 @@ ul, ol
 // Headings
 %heading
   @include leader(0)
-  @include trailer(1)
 
 h1, .h1
   @extend %heading
+  @include adjust-font-size-to(36px)
+  @include trailer(1, 36px)
+  font-family: 'Sue Ellen Francisco', cursive
+  font-weight: normal
 
 h2, .h2
   @extend %heading
