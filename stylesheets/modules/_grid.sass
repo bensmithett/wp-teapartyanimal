@@ -1,0 +1,21 @@
+// This module is a top-level Susy grid container.
+//
+// You can use Susy methods like span-columns() and at-breakpoint() in modules that
+// are placed inside this container. 
+//
+// You'll eventually want to delete the +susy-grid-background lines.
+//
+// http://susy.oddbird.net/guides/reference/
+
+.grid
+  +container
+
+  +at-breakpoint($tablet)
+    +with-grid-settings($tablet-total-columns, $tablet-column-width, $tablet-gutter-width, $tablet-grid-padding)
+      +container
+
+  +at-breakpoint($desktop)
+    +with-grid-settings($desktop-total-columns, $desktop-column-width, $desktop-gutter-width, $desktop-grid-padding)
+      +container
+      @if $lt-ie9
+        width: pxtoem(1024px, $base-font-size) // Force static width for IE7+8

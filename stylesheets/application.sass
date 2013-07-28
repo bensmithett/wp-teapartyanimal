@@ -3,25 +3,21 @@
 // Mixin libraries from gems
 @import compass
 @import susy
-@import animation
 
-// Vendor styles
-@import vendor/normalize
+// Our functions & mixins
+@import functions/**/*
 
 // Config variables
 @import config
 
+// Vendor styles
+@import vendor/normalize
+
 // @font-face declarations
 @import fonts
 
-// Globally available mixins
-@import global_mixins
-
 // Base
-@import base/elements
-
-// Layout
-@import layout/susy
+@import base/**/*
 
 // Modules
 @import modules/**/*
