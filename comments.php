@@ -19,17 +19,19 @@ if ( post_password_required() )
 	return;
 ?>
 
-	<div id="comments" class="comments-area">
+<div id="comments" class="comments-area">
 
 	<?php // You can start editing here -- including this comment! ?>
 
 	<?php if ( have_comments() ) : ?>
-		<h2 class="comments-title">
-			<?php
-				printf( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'teapartyanimal' ),
-					number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
-			?>
-		</h2>
+		<div class="comments-area__title">
+			<h2 class="h1">
+				<?php
+					printf( _nx( 'One cup of comments', '%1$s cups of comments', get_comments_number(), 'comments title', 'teapartyanimal' ),
+						number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
+				?>
+			</h2>
+		</div>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-above" class="navigation-comment" role="navigation">
@@ -68,6 +70,9 @@ if ( post_password_required() )
 		<p class="no-comments"><?php _e( 'Comments are closed.', 'teapartyanimal' ); ?></p>
 	<?php endif; ?>
 
-	<?php comment_form(); ?>
+	<?php $comments_args = array(
+		'title_reply' => 'Pour your reply'
+		); ?>
+	<?php comment_form($comments_args); ?>
 
 </div><!-- #comments -->
