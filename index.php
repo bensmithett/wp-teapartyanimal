@@ -13,7 +13,7 @@
 
 get_header(); ?>
 	
-	<div class="content">
+	<div class="page__content" id="content" role="main">
 		<?php if ( have_posts() ) : ?>
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -37,5 +37,10 @@ get_header(); ?>
 		<?php endif; ?>
 	</div>
 
-<?php get_sidebar(); ?>
+	<div class="page__sidebar">
+		<div class="sidebar">
+			<?php get_sidebar(); ?>
+		</div>
+	</div>
+
 <?php get_footer(); ?>
