@@ -1,8 +1,14 @@
 .widget
   +trailer
 
+  &:last-child
+    +trailer(0)
+
+    ul
+      +trailer(0)
+
 .widget__title
   +adjust-font-size-to(20px)
-  +trailer(0.2)
+  +trailer(0.5)
   color: $grey
   text-transform: uppercase

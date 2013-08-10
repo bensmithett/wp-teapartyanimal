@@ -12,10 +12,10 @@
 
   +at-breakpoint($tablet)
     +with-grid-settings($tablet-total-columns, $tablet-column-width, $tablet-gutter-width, $tablet-grid-padding)
-      +container
+      +set-container-width
 
   +at-breakpoint($desktop)
     +with-grid-settings($desktop-total-columns, $desktop-column-width, $desktop-gutter-width, $desktop-grid-padding)
-      +container
+      +set-container-width
       @if $lt-ie9
         width: pxtoem(1024px, $base-font-size) // Force static width for IE7+8

@@ -25,7 +25,7 @@ if ( post_password_required() )
 
 	<?php if ( have_comments() ) : ?>
 		<div class="comments-area__title">
-			<h2 class="h1">
+			<h2>
 				<?php
 					printf( _nx( 'One cup of comments', '%1$s cups of comments', get_comments_number(), 'comments title', 'teapartyanimal' ),
 						number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
@@ -71,7 +71,7 @@ if ( post_password_required() )
 	<?php endif; ?>
 
 	<?php $comments_args = array(
-		'title_reply' => 'Pour your reply'
+		'title_reply' => 'Pour your reply...'
 		); ?>
 	<?php comment_form($comments_args); ?>
 

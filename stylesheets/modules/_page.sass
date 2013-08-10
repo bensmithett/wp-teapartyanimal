@@ -1,7 +1,13 @@
 .page__content
+  +trailer
+  
   +at-breakpoint($desktop)
-    +span-columns(9, 12)
+    +with-grid-settings($desktop-total-columns, $desktop-column-width, $desktop-gutter-width, $desktop-grid-padding)
+      +span-columns(9, 12)
 
 .page__sidebar
+  +trailer
+
   +at-breakpoint($desktop)
-    +span-columns(3 omega, 12)
+    +with-grid-settings($desktop-total-columns, $desktop-column-width, $desktop-gutter-width, $desktop-grid-padding)
+      +span-columns(3 omega, 12)

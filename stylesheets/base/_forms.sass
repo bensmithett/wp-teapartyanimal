@@ -1,6 +1,8 @@
-[type=search]
+input[type=search],
+input[type=text],
+textarea
   border: 1px solid $light-blue
-  border-radius: rhythm(1)
+  border-radius: rhythm(0.5)
   box-sizing: border-box
   padding: rhythm(0.3)
   width: 100%
@@ -10,3 +12,12 @@
 
   +placeholder
     color: $light-blue
+
+button,
+input[type=submit]
+  background-color: $dark-blue
+  border: none
+  border-radius: rhythm(0.5)
+  box-sizing: border-box
+  color: $white
+  padding: rhythm(0.5)

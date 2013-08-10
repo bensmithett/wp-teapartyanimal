@@ -32,17 +32,18 @@ ul, ol
 // Headings
 %heading
   @include leader(0)
-
-h1, .h1, .comment-reply-title
-  @extend %heading
-  @include adjust-font-size-to(36px)
   @include trailer(0)
   font-family: 'Sue Ellen Francisco', cursive
   font-weight: normal
 
+h1, .h1
+  @extend %heading
+  @include adjust-font-size-to(50px)
+
 h2, .h2
   @extend %heading
+  @include adjust-font-size-to(36px)
 
 h3, .h3
   @extend %heading
-  
+  @include adjust-font-size-to(36px)  
